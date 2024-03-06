@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.instruct{
+    border-bottom: 4px solid rgb(45, 139, 35);
+}
+.box{
+    width: 700px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 60px;
+}
+.box h1{
+    padding-bottom: 10px !important;
+}
+
+.squares{
+    width: 420px;
+    min-height: 120px;
+}
+.squares button{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background: red;
+}
+.checkbtn{
+    width: 200px;
+    height: 50px;
+}
+.checkbtn h5{
+    line-height: 0px;
+}
+.squares .green{
+    background-color: "green" !important;
+}
+.squares .red{
+    background-color: "red" !important;
+}
+.squares .orange{
+    background-color: "orange" !important;
+}
