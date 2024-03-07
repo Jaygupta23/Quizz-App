@@ -8,7 +8,7 @@ function Test() {
     <>
       <nav className="navbar navbar-expand-lg bg-secondary">
         <div className="container-fluid ">
-          <Link className="navbar-brand mx-auto text-light fs-3" to="/">
+          <Link className="navbar-brand mx-auto text-light fs-3" to="/test">
             Online Test Preparation
           </Link>
          
@@ -27,7 +27,9 @@ function Test() {
         </div>
       </nav>
       <div className="container-fluid">
+      <div className="row bg-body-tertiary">
         <QuestionData />
+        </div>
       </div>
     </>
   );

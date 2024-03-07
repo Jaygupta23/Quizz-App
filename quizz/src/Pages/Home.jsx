@@ -18,7 +18,7 @@ function Home() {
     <>
       <nav className="navbar navbar-expand-lg bg-dark">
         <div className="container-fluid ">
-          <Link className="navbar-brand ms-5 text-light fs-4" to="/">
+          <Link className="navbar-brand ms-5 text-light fs-4" to="/test">
             Online Test
           </Link>
           
