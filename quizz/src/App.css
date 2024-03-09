@@ -1,49 +1,99 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.instruct{
-    border-bottom: 4px solid rgb(45, 139, 35);
+.instruct {
+  border-bottom: 4px solid rgb(45, 139, 35);
 }
-.box{
-    width: 700px;
-    height: 500px;
-    border: 1px solid black;
-    border-radius: 60px;
+.box {
+  min-height: 500px;
+  border: 1px solid black;
+  border-radius: 60px;
+  padding: 50px 0px 50px 0px;
 }
-.box h1{
-    padding-bottom: 10px !important;
+.box h1 {
+  padding-bottom: 10px !important;
+}
+.squares {
+  height: 200px;
+  overflow-y: scroll;
+  padding: 5px 8px 5px 5px;
+  /* margin-left: 50px!important; */
+}
+.squares button {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  background: red;
+  margin-left: 10px;
+}
+.checkbtn {
+  width: 200px;
+  height: 50px;
+}
+.checkbtn h5 {
+  line-height: 0px;
+}
+.squares .green {
+  background-color: "green" !important;
+}
+.squares .red {
+  background-color: "red" !important;
+}
+.squares .orange {
+  background-color: "orange" !important;
+}
+.submitbutton{
+    line-height: 30px;
+}
+.form-check{
+  width: 250px;
+}
+.answersheet{
+    height: 300px;
+    overflow-y: scroll;
 }
 
-.squares{
-    width: 420px;
-    min-height: 120px;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .timer {
+    font-size: 16px;
+  }
 }
-.squares button{
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    background: red;
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .submitbutton {
+    margin-left: 50px;
+    width: 150px;
+  }
 }
-.checkbtn{
-    width: 200px;
-    height: 50px;
-}
-.checkbtn h5{
-    line-height: 0px;
-}
-.squares .green{
-    background-color: "green" !important;
-}
-.squares .red{
-    background-color: "red" !important;
-}
-.squares .orange{
-    background-color: "orange" !important;
+@media only screen and (min-width: 312px) and (max-width: 431px) {
+  .questionHead {
+    font-size: 1.1rem;
+    line-height: 30px;
+  }
+  .submitbutton {
+    width: 110px;
+    height: 40px;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .btnGrp {
+    width: 60px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .btnsubmit {
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .questions{
+    font-size: 16px;
+    margin-left: 10px;
+  }
 }

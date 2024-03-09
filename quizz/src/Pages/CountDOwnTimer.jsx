@@ -17,7 +17,7 @@ const CountDOwnTimer = () => {
   
     return (
       <div>
-        <h4 className='text-center py-3'>
+        <h4 className='text-center py-3 fs-md-5 timer'>
           {hours} Hr : {minutes} min : {seconds} sec
         </h4>
       </div>

@@ -1,52 +1,62 @@
 const AllQuestion = [
-  
   {
+    id: 1,
     Question: "Which among the following planets has rings?",
     OptionA: "Saturn",
     OptionB: "Jupiter",
     OptionC: "Venus",
     OptionD: "Earth",
     visited: true,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 2,
     Question: "Which among the following is popular as Herring Pond?",
     OptionA: "Arabian Sea",
     OptionB: "Atlantic Ocean",
     OptionC: "Mediterranean Sea ",
     OptionD: "Pacific Sea",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 3,
     Question: "Central Road Research Institute is located in …",
     OptionA: "New Delhi",
     OptionB: "Mumbai",
     OptionC: "Gulbarg",
     OptionD: "Lucknow",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 4,
     Question: "National Emblem of Australia is ……….",
     OptionA: "James Hicky",
     OptionB: "Abul Kalam Azad",
     OptionC: "Surendranath Banerjee",
     OptionD: "Hugh Rose",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
 
   {
+    id: 5,
     Question: "Majlis is the Parliament of …",
     OptionA: "Turkey",
     OptionB: "Iran",
     OptionC: "Afghanistan",
     OptionD: "Iraq",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 6,
     Question:
       "In a Cricket World Cup match, who has scored the maximum runs in one innin",
     OptionA: "Chris Gayle",
@@ -54,27 +64,33 @@ const AllQuestion = [
     OptionC: "Virat Kohli",
     OptionD: "AB de Villiers",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 7,
     Question: "The term ‘jump ball’ is related to …",
     OptionA: "Football",
     OptionB: " Badminton",
     OptionC: "Basketball",
     OptionD: "Boxing",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 8,
     Question: "Diamond is a …",
     OptionA: "Igneous rock",
     OptionB: "Sedimentary rock",
     OptionC: "Metamorphic rock",
     OptionD: "Both B & C",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 9,
     Question:
       "In a Cricket World Cup match, who has scored the maximum runs in one innin",
     OptionA: "Chris Gayle",
@@ -82,9 +98,11 @@ const AllQuestion = [
     OptionC: "Virat Kohli",
     OptionD: "AB de Villiers",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 10,
     Question:
       "The headquarters of Food and Agriculture Organisation (FAO) is located in …",
     OptionA: "New York City",
@@ -92,89 +110,105 @@ const AllQuestion = [
     OptionC: "Rome",
     OptionD: "Washington DC",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
-    
+    id: 11,
     Question: "Which among the following planets has rings?",
     OptionA: "Saturn",
     OptionB: "Jupiter",
     OptionC: "Venus",
     OptionD: "Earth",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
-    
+    id: 12,
     Question: "Which among the following is popular as Herring Pond?",
     OptionA: "Arabian Sea",
     OptionB: "Atlantic Ocean",
     OptionC: "Mediterranean Sea ",
     OptionD: "Pacific Sea",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
-    
+    id: 13,
+
     Question: "Central Road Research Institute is located in …",
     OptionA: "New Delhi",
     OptionB: "Mumbai",
     OptionC: "Gulbarg",
     OptionD: "Lucknow",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
-  
+    id: 14,
+
     Question: "National Emblem of Australia is ……….",
     OptionA: "James Hicky",
     OptionB: "Abul Kalam Azad",
     OptionC: "Surendranath Banerjee",
     OptionD: "Hugh Rose",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
 
   {
     id: 15,
+
     Question: "Majlis is the Parliament of …",
     OptionA: "Turkey",
     OptionB: "Iran",
     OptionC: "Afghanistan",
     OptionD: "Iraq",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
-   
+    id: 16,
+
     Question: "The term ‘jump ball’ is related to …",
     OptionA: "Football",
     OptionB: " Badminton",
     OptionC: "Basketball",
     OptionD: "Boxing",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
-   
+    id: 17,
+
     Question: "Diamond is a …",
     OptionA: "Igneous rock",
     OptionB: "Sedimentary rock",
     OptionC: "Metamorphic rock",
     OptionD: "Both B & C",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 18,
     Question: "Diamond is a …",
     OptionA: "Igneous rock",
     OptionB: "Sedimentary rock",
     OptionC: "Metamorphic rock",
     OptionD: "Both B & C",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 19,
     Question:
       "In a Cricket World Cup match, who has scored the maximum runs in one innin",
     OptionA: "Chris Gayle",
@@ -182,9 +216,11 @@ const AllQuestion = [
     OptionC: "Virat Kohli",
     OptionD: "AB de Villiers",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 20,
     Question:
       "The headquarters of Food and Agriculture Organisation (FAO) is located in …",
     OptionA: "New York City",
@@ -192,99 +228,355 @@ const AllQuestion = [
     OptionC: "Rome",
     OptionD: "Washington DC",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 21,
     Question: "Which among the following planets has rings?",
     OptionA: "Saturn",
     OptionB: "Jupiter",
     OptionC: "Venus",
     OptionD: "Earth",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 22,
     Question: "Which among the following is popular as Herring Pond?",
     OptionA: "Arabian Sea",
     OptionB: "Atlantic Ocean",
     OptionC: "Mediterranean Sea ",
     OptionD: "Pacific Sea",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 23,
     Question: "Central Road Research Institute is located in …",
     OptionA: "New Delhi",
     OptionB: "Mumbai",
     OptionC: "Gulbarg",
     OptionD: "Lucknow",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 24,
     Question: "National Emblem of Australia is ……….",
     OptionA: "James Hicky",
     OptionB: "Abul Kalam Azad",
     OptionC: "Surendranath Banerjee",
     OptionD: "Hugh Rose",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
-
   {
-    Question: "Majlis is the Parliament of …",
-    OptionA: "Turkey",
-    OptionB: "Iran",
-    OptionC: "Afghanistan",
-    OptionD: "Iraq",
+    id: 25,
+    Question:
+      "In a Cricket World Cup match, who has scored the maximum runs in one innin",
+    OptionA: "Chris Gayle",
+    OptionB: "Martin Guptill",
+    OptionC: "Virat Kohli",
+    OptionD: "AB de Villiers",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 26,
     Question: "The term ‘jump ball’ is related to …",
     OptionA: "Football",
     OptionB: " Badminton",
     OptionC: "Basketball",
     OptionD: "Boxing",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 27,
+    Question: "Diamond is a …",
+    OptionA: "Igneous rock",
+    OptionB: "Sedimentary rock",
+    OptionC: "Metamorphic rock",
+    OptionD: "Both B & C",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 28,
+    Question:
+      "In a Cricket World Cup match, who has scored the maximum runs in one innin",
+    OptionA: "Chris Gayle",
+    OptionB: "Martin Guptill",
+    OptionC: "Virat Kohli",
+    OptionD: "AB de Villiers",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 29,
+    Question:
+      "The headquarters of Food and Agriculture Organisation (FAO) is located in …",
+    OptionA: "New York City",
+    OptionB: "Geneva",
+    OptionC: "Rome",
+    OptionD: "Washington DC",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+
+  {
+    id: 30,
+
+    Question: "Which among the following is popular as Herring Pond?",
+    OptionA: "Arabian Sea",
+    OptionB: "Atlantic Ocean",
+    OptionC: "Mediterranean Sea ",
+    OptionD: "Pacific Sea",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+
+  {
+    id: 31,
+    Question: "Majlis is the Parliament of …",
+    OptionA: "Turkey",
+    OptionB: "Iran",
+    OptionC: "Afghanistan",
+    OptionD: "Iraq",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 32,
+    Question: "The term ‘jump ball’ is related to …",
+    OptionA: "Football",
+    OptionB: " Badminton",
+    OptionC: "Basketball",
+    OptionD: "Boxing",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 33,
     Question: "Central Road Research Institute is located in …",
     OptionA: "New Delhi",
     OptionB: "Mumbai",
     OptionC: "Gulbarg",
     OptionD: "Lucknow",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
-    Question: "National Emblem of Australia is ……….",
-    OptionA: "James Hicky",
-    OptionB: "Abul Kalam Azad",
-    OptionC: "Surendranath Banerjee",
-    OptionD: "Hugh Rose",
+    id: 34,
+    Question:
+      "In a Cricket World Cup match, who has scored the maximum runs in one innin",
+    OptionA: "Chris Gayle",
+    OptionB: "Martin Guptill",
+    OptionC: "Virat Kohli",
+    OptionD: "AB de Villiers",
     visited: false,
-    submitted:false
-  },
-
-  {
-    Question: "Majlis is the Parliament of …",
-    OptionA: "Turkey",
-    OptionB: "Iran",
-    OptionC: "Afghanistan",
-    OptionD: "Iraq",
-    visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
   },
   {
+    id: 35,
     Question: "The term ‘jump ball’ is related to …",
     OptionA: "Football",
     OptionB: " Badminton",
     OptionC: "Basketball",
     OptionD: "Boxing",
     visited: false,
-    submitted:false
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 36,
+    Question: "Diamond is a …",
+    OptionA: "Igneous rock",
+    OptionB: "Sedimentary rock",
+    OptionC: "Metamorphic rock",
+    OptionD: "Both B & C",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 37,
+    Question:
+      "In a Cricket World Cup match, who has scored the maximum runs in one innin",
+    OptionA: "Chris Gayle",
+    OptionB: "Martin Guptill",
+    OptionC: "Virat Kohli",
+    OptionD: "AB de Villiers",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 38,
+    Question:
+      "The headquarters of Food and Agriculture Organisation (FAO) is located in …",
+    OptionA: "New York City",
+    OptionB: "Geneva",
+    OptionC: "Rome",
+    OptionD: "Washington DC",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 39,
+
+    Question: "Which among the following planets has rings?",
+    OptionA: "Saturn",
+    OptionB: "Jupiter",
+    OptionC: "Venus",
+    OptionD: "Earth",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 40,
+
+    Question: "Which among the following is popular as Herring Pond?",
+    OptionA: "Arabian Sea",
+    OptionB: "Atlantic Ocean",
+    OptionC: "Mediterranean Sea ",
+    OptionD: "Pacific Sea",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 41,
+    Question: "National Emblem of Australia is ……….",
+    OptionA: "James Hicky",
+    OptionB: "Abul Kalam Azad",
+    OptionC: "Surendranath Banerjee",
+    OptionD: "Hugh Rose",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+
+  {
+    id: 42,
+    Question: "Majlis is the Parliament of …",
+    OptionA: "Turkey",
+    OptionB: "Iran",
+    OptionC: "Afghanistan",
+    OptionD: "Iraq",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 43,
+    Question:
+      "In a Cricket World Cup match, who has scored the maximum runs in one innin",
+    OptionA: "Chris Gayle",
+    OptionB: "Martin Guptill",
+    OptionC: "Virat Kohli",
+    OptionD: "AB de Villiers",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 44,
+    Question: "The term ‘jump ball’ is related to …",
+    OptionA: "Football",
+    OptionB: " Badminton",
+    OptionC: "Basketball",
+    OptionD: "Boxing",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 45,
+    Question: "Diamond is a …",
+    OptionA: "Igneous rock",
+    OptionB: "Sedimentary rock",
+    OptionC: "Metamorphic rock",
+    OptionD: "Both B & C",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 46,
+    Question:
+      "In a Cricket World Cup match, who has scored the maximum runs in one innin",
+    OptionA: "Chris Gayle",
+    OptionB: "Martin Guptill",
+    OptionC: "Virat Kohli",
+    OptionD: "AB de Villiers",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 47,
+    Question:
+      "The headquarters of Food and Agriculture Organisation (FAO) is located in …",
+    OptionA: "New York City",
+    OptionB: "Geneva",
+    OptionC: "Rome",
+    OptionD: "Washington DC",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 48,
+
+    Question: "Which among the following planets has rings?",
+    OptionA: "Saturn",
+    OptionB: "Jupiter",
+    OptionC: "Venus",
+    OptionD: "Earth",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 49,
+
+    Question: "Which among the following is popular as Herring Pond?",
+    OptionA: "Arabian Sea",
+    OptionB: "Atlantic Ocean",
+    OptionC: "Mediterranean Sea ",
+    OptionD: "Pacific Sea",
+    visited: false,
+    submitted: false,
+    answer: "",
+  },
+  {
+    id: 50,
+    Question: "The term ‘jump ball’ is related to …",
+    OptionA: "Football",
+    OptionB: " Badminton",
+    OptionC: "Basketball",
+    OptionD: "Boxing",
+    visited: false,
+    submitted: false,
+    answer: "",
   },
 ];
 

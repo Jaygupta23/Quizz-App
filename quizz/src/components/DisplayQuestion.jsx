@@ -1,91 +1,158 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { AiTwotoneContainer } from "react-icons/ai";
+import { FaClipboardCheck } from "react-icons/fa6";
+import { useContext } from "react";
+import Context from "../context/Context";
 
-function DisplayQuestion({ setQuizzIndex, quizzIndex, allQuestions }) {
+function DisplayQuestion({ allQuestions }) {
+  const { answer, setAnswer, setQuizzIndex, quizzIndex } = useContext(Context);
   const [question, setQuestion] = useState(allQuestions[quizzIndex]);
+  const [selectedOption, setSelectedOption] = useState("");
 
   useEffect(() => {
     setQuestion(allQuestions[quizzIndex]);
-  }, [quizzIndex, allQuestions]);
+    setSelectedOption(allQuestions[quizzIndex].answer);
+  }, [quizzIndex, allQuestions, answer]);
 
+  const handleOptionSelect = (optionValue) => {
+    setSelectedOption(optionValue);
+  };
   const prevBtn = (index) => {
     if (index !== -1) {
       setQuizzIndex(index);
-      allQuestions[quizzIndex - 1].visited = true;
+      if (allQuestions[index].visited === false) {
+        allQuestions[index].visited = true;
+      }
     } else {
-      setQuizzIndex(29);
-      allQuestions[29].visited = true;
+      setQuizzIndex(allQuestions.length - 1);
+      if (allQuestions[allQuestions.length - 1].visited === false) {
+        allQuestions[allQuestions.length - 1].visited = true;
+      }
     }
   };
   const nextBtn = (index) => {
-    if (index !== 30) {
+    if (index !== 50) {
       setQuizzIndex(index);
-      allQuestions[quizzIndex + 1].visited = true;
+      if (allQuestions[index].visited === false) {
+        allQuestions[index].visited = true;
+      }
     } else {
       setQuizzIndex(0);
-      allQuestions[0].visited = true;
+      if (allQuestions[0].visited === false) {
+        allQuestions[0].visited = true;
+      }
     }
   };
+
   const submitBtn = (index) => {
-    if (index !== 30) {
-      setQuizzIndex(index);
-      allQuestions[quizzIndex + 1].visited = true;
-      allQuestions[quizzIndex].submitted = true;
+    nextBtn(index + 1);
+    allQuestions[index].submitted = true;
+    allQuestions[quizzIndex].answer = selectedOption;
+    const exist = answer.find((current) => current.id === index);
+
+    if (exist) {
+      let updatedArray = [...answer];
+      updatedArray[index] = {
+        id: index,
+        selectedOption: selectedOption,
+      };
+      setAnswer(updatedArray);
     } else {
-      setQuizzIndex(0);
-      allQuestions[0].visited = true;
-      allQuestions[29].submitted = true;
+      setAnswer((answer) => {
+        return [
+          ...answer,
+          {
+            id: index,
+            selectedOption: selectedOption,
+          },
+        ];
+      });
+
+      setSelectedOption("");
     }
   };
 
   return (
     <>
-      <div className="main ms-5 mt-5">
-        <h1>Question : {quizzIndex + 1}</h1>
-        <hr className="w-75" />
-        <div className="sub-box mt-5">
-          <h5>
+      <div className="main mx-lg-5 mx-md-3 mx-sm-5 mt-md-5 mt-3 ">
+        <div className="container-fluid d-flex ">
+          <h1 className="questionHead mt-2 mt-md-0">
+            <AiTwotoneContainer className="mb-2 " /> Question : {quizzIndex + 1}
+          </h1>
+          <div className="submitTest mx-md-auto mt-1 ms-4 submitbutton">
+            <Link
+              to={"/testOver"}
+              state={{ answer, quizzIndex }}
+              className="btn btn-lg  bg-success text-light  px-lg-5  submitbutton"
+            >
+              Finish test <FaClipboardCheck className="mb-1" />
+            </Link>
+          </div>
+        </div>
+        <hr className="w-75 " />
+        <div className="sub-box mt-5 ">
+          <h4 className="questions">
             Q {quizzIndex + 1} - {question.Question}
-          </h5>
+          </h4>
           <ol type="A" className="mt-5 fs-5 col-3">
             <div className="form-check">
-              <h5>
+              <h5 className="questions">
                 <input
                   type="radio"
                   className="me-2 form-check-input"
                   name="option"
-                />{" "}
-                A. {question.OptionA}
+                  value={question.OptionA}
+                  checked={selectedOption === question.OptionA}
+                  onChange={() => handleOptionSelect(question.OptionA)}
+                />
+                {question.OptionA}
               </h5>
             </div>
-            <h5>
-              <input
-                type="radio"
-                className="me-2 form-check-input"
-                name="option"
-              />{" "}
-              B. {question.OptionB}
-            </h5>
-            <h5>
-              <input
-                type="radio"
-                className="me-2 form-check-input"
-                name="option"
-              />{" "}
-              C. {question.OptionC}
-            </h5>
-            <h5>
-              <input
-                type="radio"
-                className="me-2 form-check-input"
-                name="option"
-              />{" "}
-              D. {question.OptionD}
-            </h5>
+            <div className="form-check">
+              <h5 className="questions">
+                <input
+                  type="radio"
+                  className="me-2 form-check-input"
+                  name="option"
+                  value={question.OptionB}
+                  checked={selectedOption === question.OptionB}
+                  onChange={() => handleOptionSelect(question.OptionB)}
+                />
+                {question.OptionB}
+              </h5>
+            </div>
+            <div className="form-check">
+              <h5 className="questions">
+                <input
+                  type="radio"
+                  className="me-2 form-check-input"
+                  name="option"
+                  value={question.OptionC}
+                  checked={selectedOption === question.OptionC}
+                  onChange={() => handleOptionSelect(question.OptionC)}
+                />
+                {question.OptionC}
+              </h5>
+            </div>
+            <div className="form-check">
+              <h5 className="questions">
+                <input
+                  type="radio"
+                  className="me-2 form-check-input"
+                  name="option"
+                  value={question.OptionD}
+                  checked={selectedOption === question.OptionD}
+                  onChange={() => handleOptionSelect(question.OptionD)}
+                />
+                {question.OptionD}
+              </h5>
+            </div>
           </ol>
         </div>
-        <div className="button-group mt-5">
+        <div className="button-group my-5">
           <button
-            className="btn btn-lg bg-success text-light me-3"
+            className="btn btn-lg bg-success text-light me-3 ms-2 btnGrp"
             onClick={() => {
               prevBtn(quizzIndex - 1);
             }}
@@ -93,7 +160,7 @@ function DisplayQuestion({ setQuizzIndex, quizzIndex, allQuestions }) {
             Prev
           </button>
           <button
-            className="btn btn-lg bg-success text-light me-5"
+            className="btn btn-lg bg-success text-light me-5 btnGrp"
             onClick={() => {
               nextBtn(quizzIndex + 1);
             }}
@@ -101,9 +168,10 @@ function DisplayQuestion({ setQuizzIndex, quizzIndex, allQuestions }) {
             Next
           </button>
           <button
-            className="btn btn-lg bg-primary text-light me-5"
+            className="btn btn-lg bg-primary text-light btnsubmit"
+            disabled={selectedOption ? false : true}
             onClick={() => {
-              submitBtn(quizzIndex + 1);
+              submitBtn(quizzIndex);
             }}
           >
             Submit
