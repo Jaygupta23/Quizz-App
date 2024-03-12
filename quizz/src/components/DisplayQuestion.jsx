@@ -4,6 +4,9 @@ import { AiTwotoneContainer } from "react-icons/ai";
 import { FaClipboardCheck } from "react-icons/fa6";
 import { useContext } from "react";
 import Context from "../context/Context";
+import { GrFormPreviousLink, GrFormNextLink } from "react-icons/gr";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import {  RxCross1 } from "react-icons/rx";
 
 function DisplayQuestion({ allQuestions }) {
   const { answer, setAnswer, setQuizzIndex, quizzIndex } = useContext(Context);
@@ -77,14 +80,18 @@ function DisplayQuestion({ allQuestions }) {
     <>
       <div className="main mx-lg-5 mx-md-3 mx-sm-5 mt-md-5 mt-3 ">
         <div className="container-fluid d-flex ">
-          <h1 className="questionHead mt-2 mt-md-0">
+          <h1
+            className="questionHead mt-2 mt-md-0"
+            style={{ color: "#0DAD8E" }}
+          >
             <AiTwotoneContainer className="mb-2 " /> Question : {quizzIndex + 1}
           </h1>
           <div className="submitTest mx-md-auto mt-1 ms-4 submitbutton">
             <Link
               to={"/testOver"}
               state={{ answer, quizzIndex }}
-              className="btn btn-lg  bg-success text-light  px-lg-5  submitbutton"
+              className="btn btn-lg text-light px-lg-5 submitbutton"
+              style={{ backgroundColor: "#0DAD8E" }}
             >
               Finish test <FaClipboardCheck className="mb-1" />
             </Link>
@@ -152,29 +159,33 @@ function DisplayQuestion({ allQuestions }) {
         </div>
         <div className="button-group my-5">
           <button
-            className="btn btn-lg bg-success text-light me-3 ms-2 btnGrp"
+            className="btn btn-lg text-light me-3 ms-2 btnGrp"
+            style={{ backgroundColor: "#0DAD8E" }}
             onClick={() => {
               prevBtn(quizzIndex - 1);
             }}
           >
-            Prev
+            <GrFormPreviousLink className="fs-2 " />
           </button>
           <button
-            className="btn btn-lg bg-success text-light me-5 btnGrp"
+            className="btn btn-lg text-light me-5 btnGrp"
+            style={{ backgroundColor: "#0DAD8E" }}
             onClick={() => {
               nextBtn(quizzIndex + 1);
             }}
           >
-            Next
+            <GrFormNextLink className="fs-2" />
           </button>
           <button
-            className="btn btn-lg bg-primary text-light btnsubmit"
+            className="btn btn-lg text-light btnsubmit"
             disabled={selectedOption ? false : true}
+            style={{ backgroundColor: "#0DAD8E" }}
             onClick={() => {
               submitBtn(quizzIndex);
             }}
           >
-            Submit
+            Submit{" "}
+            {selectedOption ? <IoMdCheckmarkCircleOutline /> : <RxCross1 />}
           </button>
         </div>
       </div>

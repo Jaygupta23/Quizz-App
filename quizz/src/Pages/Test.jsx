@@ -6,7 +6,7 @@ function Test() {
   
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-secondary">
+      <nav className="navbar navbar-expand-lg" style={{backgroundColor:"#0DAD8E"}}>
         <div className="container-fluid ">
           <Link className="navbar-brand mx-auto text-light fs-3" to="/test">
             Online Test Preparation
@@ -14,7 +14,7 @@ function Test() {
         </div>
       </nav>
       <div className="container-fluid">
-      <div className="row bg-body-tertiary">
+      <div className="row" style={{backgroundColor:"#F9F9F9"}}>
         <QuestionData />
         </div>
       </div>
