@@ -107,8 +107,9 @@ function DisplayQuestion({ allQuestions }) {
               <h5 className="questions">
                 <input
                   type="radio"
-                  className="me-2 form-check-input"
+                  className="me-2 "
                   name="option"
+                  id="select1"
                   value={question.OptionA}
                   checked={selectedOption === question.OptionA}
                   onChange={() => handleOptionSelect(question.OptionA)}
@@ -120,11 +121,13 @@ function DisplayQuestion({ allQuestions }) {
               <h5 className="questions">
                 <input
                   type="radio"
-                  className="me-2 form-check-input"
+                  className="me-2 "
                   name="option"
+                  id="select2"
                   value={question.OptionB}
                   checked={selectedOption === question.OptionB}
                   onChange={() => handleOptionSelect(question.OptionB)}
+                  
                 />
                 {question.OptionB}
               </h5>
@@ -133,11 +136,13 @@ function DisplayQuestion({ allQuestions }) {
               <h5 className="questions">
                 <input
                   type="radio"
-                  className="me-2 form-check-input"
+                  id="select3"
+                  className="me-2"
                   name="option"
                   value={question.OptionC}
                   checked={selectedOption === question.OptionC}
                   onChange={() => handleOptionSelect(question.OptionC)}
+                
                 />
                 {question.OptionC}
               </h5>
@@ -146,11 +151,13 @@ function DisplayQuestion({ allQuestions }) {
               <h5 className="questions">
                 <input
                   type="radio"
-                  className="me-2 form-check-input"
+                  className="me-2 "
                   name="option"
+                  id="select4"
                   value={question.OptionD}
                   checked={selectedOption === question.OptionD}
                   onChange={() => handleOptionSelect(question.OptionD)}
+                 
                 />
                 {question.OptionD}
               </h5>
@@ -185,7 +192,7 @@ function DisplayQuestion({ allQuestions }) {
             }}
           >
             Submit{" "}
-            {selectedOption ? <IoMdCheckmarkCircleOutline /> : <RxCross1 />}
+            {selectedOption ? <IoMdCheckmarkCircleOutline className="fs-3"/> : <RxCross1 className="fs-4" />}
           </button>
         </div>
       </div>

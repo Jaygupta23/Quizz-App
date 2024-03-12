@@ -32,21 +32,32 @@
   background: red;
   margin-left: 10px;
 }
+.form-check input{
+  width: 18px;
+  height: 18x;
+}
+#select1{
+  accent-color: green; 
+
+}
+#select2{
+  accent-color: green;
+ 
+}
+#select3{
+  accent-color: green ;
+
+}
+#select4{
+  accent-color: green ;
+ 
+}
 .checkbtn {
   width: 200px;
   height: 50px;
 }
 .checkbtn h5 {
   line-height: 0px;
-}
-.squares .green {
-  background-color: "0DAD8E" !important;
-}
-.squares .red {
-  background-color: "red" !important;
-}
-.squares .orange {
-  background-color: "orange" !important;
 }
 .submitbutton{
     line-height: 30px;
