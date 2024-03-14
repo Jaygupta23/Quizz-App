@@ -22,14 +22,14 @@ function QuestionData() {
   };
   return (
     <>
-      <div className=" col-md-9 col-12 my-md-5 ps-lg-5">
+      <div className=" col-md-8 col-12 my-md-5 ps-lg-5 main1">
         <DisplayQuestion
           setQuizzIndex={setQuizzIndex}
           quizzIndex={quizzIndex}
           allQuestions={allQuestions}
         />
       </div>
-      <div className=" col-md-3 col-12 sub-box2 pb-3">
+      <div className=" col-md-4 col-12 sub-box2 pb-3">
         <div className="bg-body-secondary">
           <h3 className="text-center py-3 " style={{color: "#0DAD8E"}}>Time Left</h3>
         </div>

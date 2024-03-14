@@ -104,7 +104,7 @@ function DisplayQuestion({ allQuestions }) {
           </h4>
           <ol type="A" className="mt-5 fs-5 col-3">
             <div className="form-check">
-              <h5 className="questions">
+              <h6 className="questions">
                 <input
                   type="radio"
                   className="me-2 "
@@ -114,11 +114,11 @@ function DisplayQuestion({ allQuestions }) {
                   checked={selectedOption === question.OptionA}
                   onChange={() => handleOptionSelect(question.OptionA)}
                 />
-                {question.OptionA}
-              </h5>
+                <label htmlFor="select1" className="fs-6"> {question.OptionA} </label>
+              </h6>
             </div>
             <div className="form-check">
-              <h5 className="questions">
+              <h6 className="questions">
                 <input
                   type="radio"
                   className="me-2 "
@@ -129,11 +129,11 @@ function DisplayQuestion({ allQuestions }) {
                   onChange={() => handleOptionSelect(question.OptionB)}
                   
                 />
-                {question.OptionB}
-              </h5>
+                <label htmlFor="select2" className="fs-6"> {question.OptionB} </label>
+              </h6>
             </div>
             <div className="form-check">
-              <h5 className="questions">
+              <h6 className="questions">
                 <input
                   type="radio"
                   id="select3"
@@ -144,11 +144,11 @@ function DisplayQuestion({ allQuestions }) {
                   onChange={() => handleOptionSelect(question.OptionC)}
                 
                 />
-                {question.OptionC}
-              </h5>
+               <label htmlFor="select3" className="fs-6"> {question.OptionC} </label>
+              </h6>
             </div>
             <div className="form-check">
-              <h5 className="questions">
+              <h6 className="questions">
                 <input
                   type="radio"
                   className="me-2 "
@@ -159,8 +159,8 @@ function DisplayQuestion({ allQuestions }) {
                   onChange={() => handleOptionSelect(question.OptionD)}
                  
                 />
-                {question.OptionD}
-              </h5>
+                <label htmlFor="select4" className="fs-6"> {question.OptionD} </label>
+              </h6>
             </div>
           </ol>
         </div>
